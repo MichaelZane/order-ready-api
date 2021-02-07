@@ -21,7 +21,7 @@ router.get("/", (req, res) => {
 
 // add an order
 
-router.post('/order', (req, res) => {
+router.post('/make', (req, res) => {
     Order.insert(req.body)
     .then(saved => {
         res.status(201).json(saved)

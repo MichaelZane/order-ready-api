@@ -10,7 +10,7 @@ server.use(express.json())
 server.use(helmet())
 server.use(cors())
 
-server.use('api/order')
+server.use('api/order', orderRouter)
 
 server.get('/', (req, res) => {
     res.status(200).json({

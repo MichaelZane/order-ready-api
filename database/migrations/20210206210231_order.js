@@ -4,11 +4,14 @@ exports.up = function(knex) {
             .createTable("order", tbl => {
                 tbl.increments();
 
-                tbl.integer("orderNum")
+                tbl.string("orderNum")
+                    .notNullable()
 
                 tbl.string("name", 128)
 
-                tbl.integer("phone")
+                tbl.string("phone")
+                    .notNullable()
+                    .unique()
             })
     )
 };

@@ -9,6 +9,7 @@ module.exports = {
             user: process.env.USER,
             password: process.env.PASSWORD
         },
+
         pool: {
             min: 0,
             max: 100

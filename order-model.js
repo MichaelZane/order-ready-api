@@ -36,7 +36,7 @@ function findById(id) {
 
 function insert(order) {
     return db('order')
-        .returning('id', 'name', 'phone','orderNum', )
+        .returning(['id', 'name', 'phone','orderNum'])
         .insert(order)
 }
 

@@ -24,13 +24,14 @@ module.exports = {
     production: {
         client: 'pg',
         connection: process.env.DATABASE_URL,
+        pool: {
+            min: 0,
+            max: 10
+          },
         migrations: {
             directory: './database/migrations'
-        },
-        ssl : {
-            "require": true,
-            "rejectUnauthorized": false
-          }
+        }
+        
     },
     test: {
         client: "pg",

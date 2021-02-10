@@ -18,8 +18,8 @@ function get(id) {
 }
 
 function find() {
-    return db('order')
-        .select('*')
+    return db('order')        
+        .returning(['id', 'name', 'phone','orderNum'])
 
 }
 

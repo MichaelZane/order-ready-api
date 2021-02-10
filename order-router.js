@@ -8,9 +8,7 @@ router.get('/get', (req, res) => {
     Order.find()
     .then(order => {
         if(order) {
-        res.status(200).json({
-            message: 'Order was found'
-        })
+        res.status(200).json(order)
     } else {
         res.status(404).json({
             message: 'Could not find any orders '

@@ -1,3 +1,5 @@
+const Verify = require('twilio/lib/rest/Verify')
+
 require('dotenv').config()
 
 module.exports = {
@@ -22,17 +24,18 @@ module.exports = {
         }
     },
     production: {
-      client: 'pg',
-      connection: process.env.DATABASE_URL,
-    
-      pool: {
-          min: 2,
-          max: 10
-      },
-      migrations: {
-          directory: './database/migrations',
-          tableName: "knex_migrations"
-      }        
+        
+        client: 'pg',
+        connection: process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false },
+        pool: {
+            min: 2,
+            max: 10
+        },
+        migrations: {
+            directory: './database/migrations',
+            tableName: "knex_migrations"
+        }        
     },
     test: {
         client: "pg",

@@ -12,10 +12,14 @@ server.use(express.json())
 server.use(helmet())
 server.use(cors())
 
+const corsOptions = {
+    origin: false
+}
+
 server.use('/api/order', orderRouter)
 server.use('/api', messageRouter)
 
-server.get('/', (req, res) => {
+server.get('/', cors(corsOptions),(req, res) => {
     res.status(200).json({
         api: "If your seeing this, I am a working api"
     })

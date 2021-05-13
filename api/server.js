@@ -13,7 +13,7 @@ server.use(helmet())
 server.use(cors())
 
 const corsOptions = {
-    origin: false
+    origin: "*"
 }
 
 server.use('/api/order', orderRouter)

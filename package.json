@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mzstevens69/order-ready-api.git"
+    "url": "git+https://github.com/MichaelZane/order-ready-api.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mzstevens69/order-ready-api/issues"
+    "url": "https://github.com/MichaelZane/order-ready-api/issues"
   },
-  "homepage": "https://github.com/mzstevens69/order-ready-api#readme",
+  "homepage": "https://github.com/MichaelZane/order-ready-api#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

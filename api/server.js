@@ -11,7 +11,7 @@ server.use(express.json())
 server.use(helmet())
 //for CORS policy 
 const corsOptions ={
-    origin:"*",
+    origin:"https://order-ready.netlify.app",
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }

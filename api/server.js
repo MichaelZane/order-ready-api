@@ -9,7 +9,7 @@ const server = express()
 server.use(express.urlencoded({extended: false}))
 server.use(express.json())
 server.use(helmet())
-
+//for CORS policy 
 const corsOptions ={
     origin:'https://order-ready.netlify.app', 
     credentials:true,            //access-control-allow-credentials:true
